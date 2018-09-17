@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>   //引入 Promise 的 fallback 支持 (部分安卓手机不支持 Promise)
+       if ('addEventListener' in document) {
+         document.addEventListener('DOMContentLoaded', function() {
+           FastClick.attach(document.body);
+         }, false);
+       }
+       if(!window.Promise) {
+         document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+       }
+       window.onresize=function (){      //设置rem尺寸
+         document.documentElement.style.fontSize=document.documentElement.clientWidth/3.75+'px';
+       };
+       window.onresize();
+     </script>
+     <link rel="stylesheet" href="../static/zt/css/common.css">
+     <link rel="stylesheet" href="../static/zt/css/index.css">
+    <title>热兑爆品</title>
+  </head>
+  <body>
+    <!--头部导航-->
+    <div id="top">
+      <div class="title">
+        <div class="title_left"><img src="../static/zt/images/gonglue.png"/></div>
+        <div class="title_search">
+          <div class="search_wrap">
+            <img src="../static/zt/images/sousuo.png">
+            <span>搜索商品</span>
+          </div>
+        </div>
+        <div class="title_right"><img src="../static/zt/images/kefu2.png"/></div>
+      </div>
+      <div class="nav">
+        <ul>
+          <li>推荐</li>
+          <li>美食</li>
+          <li>母婴</li>
+          <li>水果</li>
+          <li>服饰</li>
+          <li>百货</li>
+          <li>美妆</li>
+        </ul>
+      </div>
+    </div>
+    <!--中间banner及一金抢兑板块-->
+    <div id="content">
+      <div class="header_color"></div>
+      <div class="banner"><img src="../static/zt/images/banner.png" /></div>
+      <div class="goods">
+        <h2 class="title">
+          1金抢兑
+          <span>(大额优惠券限量1金兑)</span>
+          <strong>查看更多 ></strong>
+        </h2>
+        <div class="con">
+
+        </div>
+      </div>
+      <div class="foot_color"></div>
+    </div>
+
+
+    <div id="goodslist"></div>
+  </body>
+</html>
