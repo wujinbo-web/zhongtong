@@ -1,6 +1,95 @@
+/*头部导航样式*/
+#top{
+  width: 100%;
+  height: 0.87rem;
+  background: #FBE774;
+  position: fixed;
+  z-index: 999;
+}
+#top .title{
+  width: 100%;
+  height: 0.3rem;
+  padding-top: 0.1rem;
+  display: flex;
+}
+#top .title_left,#top .title_right,#top .title_search{
+  height: 0.3rem;
+  display: flex;
+  align-items:center;
+}
+#top .title_search{
+  width: 100%;
+  margin: 0 0.17rem;
+  background: #FDF5C7;
+  border-radius: 0.15rem;
+}
+#top .search_wrap{
+  height: 0.3rem;
+  margin: 0 auto;
+  font-size: 0.12rem;
+  color: #666;
+}
+#top .search_wrap img{
+  width: 0.13rem;
+  height: 0.13rem;
+  vertical-align: middle;
+}
+#top .search_wrap span{
+  display: inline-block;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  margin-left: 0.06rem;
+}
+#top .title_left{
+  margin-left: 0.15rem;
+}
+#top .title_right{
+  margin-right: 0.15rem;
+}
+#top .title_left img, #top .title_right img{
+  width: 0.2rem;
+  height: 0.2rem;
+}
+#top .nav{
+  font-size: 0.14rem;
+  color: #666;
+  height: 0.49rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#top .nav ul{
+  position: absolute;
+  left: 0.12rem;
+  height: 0.49rem;
+}
+#top .nav li{
+  display: inline-block;
+  padding: 0 0.09rem;
+  height: 0.49rem;
+  line-height: 0.49rem;
+}
+#top .nav li.active{
+  color: #333;
+  position: relative;
+}
+#top .nav li .side_bottom{
+  display: block;
+  width: 0.2rem;
+  height: 2px;
+  position: absolute;
+  background: #333;
+  left: 50%;
+  margin-left: -0.1rem;
+  bottom: 0.07rem;
+}
+.header_color{
+  height: 0.87rem;
+}
+/*中间样式*/
 #content{
   width: 100%;
-  height: 6rem;
+  height: 5.23rem;
   position: relative;
   background: #fff;
 }
@@ -11,9 +100,7 @@
   position: absolute;
   bottom: 0;
 }
-#content .header_color{
-  height: 0.87rem;
-}
+
 #content .banner{
   width: 3.65rem;
   margin: 0 auto 0.01rem;
@@ -21,6 +108,9 @@
 }
 #content .banner img{
   width: 3.65rem;
+}
+#content .goods{
+  z-index: 2;
 }
 #content .goods .title{
   margin: 0 auto;
@@ -40,6 +130,7 @@
   line-height: 0.42rem;
   font-size: 0.13rem;
   margin-left: 0.2rem;
+  vertical-align: top;
 }
 #content .goods .title strong{
   position: absolute;
@@ -49,4 +140,78 @@
   right: 0.14rem;
   color: #6B3907;
   font-size: 0.12rem;
+}
+#content .goods .con{
+  width: 3.65rem;
+  height: 1.6rem;
+  margin: 0 auto;
+  position: relative;
+  top:-0.04rem;
+  border-bottom-left-radius: 0.05rem;
+  border-bottom-right-radius: 0.05rem;
+  box-shadow: 0 0.03rem 0.03rem rgba(255,225,43,0.32);
+}
+#content .goods .con ul{
+  display: flex;
+  padding-top: 0.08rem;
+}
+#content .goods .con li{
+  width: 1.14rem;
+  height: 1.41rem;
+  border: 1px solid #333;
+  border-radius: 0.05rem;
+  overflow: hidden;
+  margin-left:0.05rem;
+}
+#content .goods .con li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#content .goods .con .floor1{
+  width: 1.14rem;
+  height: 1.14rem;
+  position: relative;
+  font-size: 0.12rem;
+  color: #333;
+}
+#content .goods .con .floor1 img{
+  width: 1.14rem;
+  height: 1.14rem;
+}
+#content .goods .con .floor1 span{
+  position: absolute;
+  width: 100%;
+  height: 0.21rem;
+  line-height: 0.21rem;
+  bottom: 0;
+  text-align: center;
+  background: rgba(255,225,43,0.8);
+}
+#content .goods .con .floor2{
+  height: 0.27rem;
+  line-height: 0.27rem;
+  text-align: center;
+  font-size: 0.12rem;
+  color: #333;
+}
+#jingxuan{
+  position: absolute;
+  bottom:0.1rem;
+}
+
+/*商品列表*/
+#goodslist{
+    width: 100%;
+    overflow: hidden;
+}
+#goodslist .title{
+  width: 100%;
+  height: 0.39rem;
+  line-height: 0.39rem;
+  background: url("../images/cainixihuan.png") no-repeat;
+  background-size: 100%;
+  text-align: center;
+  color: #3E1210;
+  font-size: 0.13rem;
 }
