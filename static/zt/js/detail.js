@@ -3,11 +3,11 @@ $(function(){
     (function(){
       //获取滑动的跟元素
       var loop_time=2500;
-      var $box=$("#content .banner ul")[0];
-      var $box2=$("#content .banner ul");
-      var $boxChild=$("#content .banner li");
+      var $box=$("#banner ul")[0];
+      var $box2=$("#banner ul");
+      var $boxChild=$("#banner li");
       //判断图片长度决定是否需要轮播
-      var len=$("#content .banner li").length;
+      var len=$("#banner li").length;
       if( len > 1 ){
         //获取子元素的宽度
         var itemWidth

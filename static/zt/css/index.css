@@ -103,7 +103,7 @@
 /*banner图央视*/
 #content .banner{
   width: 3.65rem;
-  height: 0.99rem;
+  height: 0.95rem;
   margin: 0 auto 0.01rem;
   padding-top: 0.04rem;
   overflow: hidden;
@@ -111,6 +111,7 @@
 }
 #content .banner ul{
   width: 999rem;
+  height: 0.95rem;
   position: absolute;
   left: 0;
 }
@@ -124,6 +125,7 @@
 }
 #content .banner img{
   width: 3.65rem;
+  height: 0.95rem;
 }
 /*banner图样式*/
 #content .goods{
