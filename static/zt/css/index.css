@@ -100,15 +100,32 @@
   position: absolute;
   bottom: 0;
 }
-
+/*banner图央视*/
 #content .banner{
   width: 3.65rem;
+  height: 0.99rem;
   margin: 0 auto 0.01rem;
   padding-top: 0.04rem;
+  overflow: hidden;
+  position: relative;
+}
+#content .banner ul{
+  width: 999rem;
+  position: absolute;
+  left: 0;
+}
+#content .banner li{
+  float: left;
+}
+#content .banner a{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 #content .banner img{
   width: 3.65rem;
 }
+/*banner图样式*/
 #content .goods{
   z-index: 2;
 }
