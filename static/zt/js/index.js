@@ -1,4 +1,72 @@
 $(function(){
+
+
+
+
+
+    /*导航滚动*/
+    (function(){
+      var wrapWidth=$("#top .nav .wrap").innerWidth(); //获取显示区域的宽度
+      var ulWidth=0;  //获取导航的宽度
+      var len=$("#top .nav ul li").length;
+      var x=0;  //初始x的位置
+      for(var i=0;i<len;i++){
+        ulWidth+=$("#top .nav ul li").eq(i).innerWidth();
+      }
+      var threshold=wrapWidth-ulWidth;
+      if(threshold<0){
+        var $box=$("#top .nav ul");
+        $box[0].addEventListener("touchstart",function(ev){
+          $box.css({"transition":"none"});
+          //按下就阻止默认事件
+          ev.preventDefault();
+          var dir="";
+          var startX=ev.targetTouches[0].clientX;
+          var startY=ev.targetTouches[0].clientY;
+          var disX=ev.targetTouches[0].clientX-x;
+          var clientDisX = 0;//从按下到松手的距离
+          function fnMove(ev){
+              //松手距离
+              clientDisX = ev.targetTouches[0].clientX - startX;
+              //判断方向锁定
+              if(dir==""){
+                if(Math.abs(clientDisX)>=5){
+                    dir='x';
+                }else if(Math.abs(ev.targetTouches[0].clientY-startY)>=5){
+                    dir='y';
+                }
+              }else{
+                if(dir=="x"){
+                    ev.preventDefault();
+                    x=ev.targetTouches[0].clientX-disX;
+                }
+                if( x>0 ){
+                   $box.css("left",x/3+"px");
+                }else if( x< threshold ){
+                  $box.css("left",((x-threshold)/3+threshold)+"px");
+                }
+                else{
+                   $box.css("left",x+"px");
+                }
+              }
+            }
+            function fnEnd(ev){
+                if(x>0){
+                  x=0;
+                }else if(x<threshold){
+                  x=threshold;
+                }
+                $box.css({"transition":"0.3s all ease","left":x+"px"})
+                $box[0].removeEventListener('touchmove',fnMove,false);
+                $box[0].removeEventListener('touchend',fnEnd,false);
+            }
+            $box[0].addEventListener('touchmove',fnMove,false);
+            $box[0].addEventListener('touchend',fnEnd,false);
+        });
+      }
+    })();
+
+
     /*轮播图*/
     (function(){
       //获取滑动的跟元素

@@ -56,15 +56,22 @@
   height: 0.49rem;
   width: 100%;
   overflow: hidden;
+}
+#top .nav .wrap{
+  width: 3.51rem;
+  height: 0.49rem;
+  margin: 0 0.12rem;
+  overflow: hidden;
   position: relative;
 }
 #top .nav ul{
-  position: absolute;
-  left: 0.12rem;
+  width: 999rem;
   height: 0.49rem;
+  position: absolute;
+  left: 0px;
 }
 #top .nav li{
-  display: inline-block;
+  float: left;
   padding: 0 0.09rem;
   height: 0.49rem;
   line-height: 0.49rem;
