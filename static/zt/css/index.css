@@ -136,6 +136,7 @@
 }
 /*banner图样式*/
 #content .goods{
+  width: 100%;
   z-index: 2;
 }
 #content .goods .title{
